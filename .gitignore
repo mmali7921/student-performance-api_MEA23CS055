@@ -1,0 +1,17 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# macOS system files
+.DS_Store
+
+student_model.pkl
+/data
