@@ -54,7 +54,9 @@ student_api/
 │   └── clean_student_data.csv   # Training dataset
 ├── train_model.py           # Script to train and save the ML model
 ├── student_model.pkl        # Trained Random Forest model (serialized)
-├── Dockerfile               # Docker container configuration
+├── Dockerfile               # Docker image build instructions
+├── .dockerignore            # Files excluded from the Docker image
+├── docker-compose.yml       # One-command container orchestration
 ├── requirements.txt         # All Python dependencies (pinned versions)
 └── README.md
 ```
@@ -140,12 +142,27 @@ This will:
 
 ### Option B — Run with Docker
 
+#### Using Docker directly
+
 ```bash
 # Build the Docker image
 docker build -t student-api .
 
 # Run the container
 docker run -p 8000:8000 student-api
+```
+
+#### Using Docker Compose (recommended)
+
+```bash
+docker compose up
+```
+
+This builds the image and starts the container in one step. The API will be available at **`http://localhost:8000`**.
+
+To stop:
+```bash
+docker compose down
 ```
 
 ---
