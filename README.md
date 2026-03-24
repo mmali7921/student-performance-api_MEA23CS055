@@ -69,16 +69,15 @@ The training data is **not included** in this repository (excluded via `.gitigno
 
 **Original Source:** [Student Performance Factors — Kaggle](https://www.kaggle.com/datasets/mmali2004/student-performance-clean-dataset)
 
-**Modifications made:**
+**Modifications already applied to the linked dataset:**
 - Selected and renamed relevant columns to match the API's input features (`attendance`, `study_hours`, `previous_gpa`, `internal_marks`)
 - Cleaned missing/inconsistent values
-- Saved as `data/clean_student_data.csv`
+- The dataset on Kaggle is ready to use as-is
 
 **To set up the data before training:**
 1. Download the dataset from the Kaggle link above
-2. Apply the modifications described above (or use your own cleaned version)
-3. Place the file at `data/clean_student_data.csv`
-4. Run `python train_model.py` to train and save the model
+2. Place the file at `data/clean_student_data.csv`
+3. Run `python train_model.py` to train and save the model
 
 > **Note:** The pre-trained `student_model.pkl` is included in the repo, so you can run the API directly without needing the dataset unless you want to retrain the model.
 
